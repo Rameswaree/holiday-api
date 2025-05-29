@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "f97df53e-fdb1-4bf1-9694-812f74cf2fb0",
+		"name": "Holiday APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19438758"
+	},
+	"item": [
+		{
+			"name": "Last Three Holidays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/lastThree?country={{country}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"lastThree"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "{{country}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WeekDay Holiday Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/weekdayCount?year={{year}}&countries={{countries}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"weekdayCount"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{year}}"
+						},
+						{
+							"key": "countries",
+							"value": "{{countries}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Common Holidays",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/common?year={{year}}&countryOne={{countryOne}}&countryTwo={{countryTwo}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"common"
+					],
+					"query": [
+						{
+							"key": "year",
+							"value": "{{year}}"
+						},
+						{
+							"key": "countryOne",
+							"value": "{{countryOne}}"
+						},
+						{
+							"key": "countryTwo",
+							"value": "{{countryTwo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "holiday-api-token",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "http://localhost:8081/api/v1/holidays",
+			"type": "string"
+		},
+		{
+			"key": "country",
+			"value": "NL",
+			"type": "string"
+		},
+		{
+			"key": "year",
+			"value": "2025",
+			"type": "string"
+		},
+		{
+			"key": "countries",
+			"value": "NL,DE,US",
+			"type": "string"
+		},
+		{
+			"key": "countryOne",
+			"value": "NL",
+			"type": "string"
+		},
+		{
+			"key": "countryTwo",
+			"value": "US",
+			"type": "string"
+		}
+	]
+}
