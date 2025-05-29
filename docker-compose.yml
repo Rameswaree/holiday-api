@@ -1,0 +1,10 @@
+services:
+  application:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - JAVA_OPTS=-Xmx512m -Xms256m -XX:+UseG1GC -XX:+UseContainerSupport
+    ports:
+      - "8081:8081"
